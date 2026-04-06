@@ -690,7 +690,9 @@ class GQLBaseCRUD(AttachmentBaseController[ModelType], TransitionBaseController[
     async def paginate_data(self, query: QuerySet[ModelType], pagination_params: PaginationParams) -> Tuple:
         offset = (pagination_params.page - 1) * pagination_params.pageSize
         limit = pagination_params.pageSize
-        return await query.offset(offset).limit(limit).all(), await query.count()
+        total = await query.count()
+        data = await query.offset(offset).limit(limit).all()
+        return data, total
 
     async def get_final_queryset(self, data, paginator_count, fields: Optional[List[str]] = []) -> ApiResponse:
         # Check if a custom response schema is provided
