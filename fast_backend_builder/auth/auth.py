@@ -215,3 +215,7 @@ class Auth:
         """
         if not cls._initialized.get():
             raise Exception("Auth service is not initialized. Call `Auth.init()` first.")
+
+   @classmethod 
+   def _lets_initialize(cls):
+
