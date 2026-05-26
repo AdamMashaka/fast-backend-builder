@@ -2,7 +2,7 @@
 
 **fast-backend-builder** is a project generator and manager for **FastAPI** with **Tortoise ORM** & **Aerich**.
 
-💡 **FastAPI Backend Builder** – A lightweight library to help you quickly scaffold and build FastAPI projects.
+💡 **FastAPI Backend Builder** – A lightweight library to help you quickly scaffold and build FastAPI projects as a starter kit.
 
 ---
 
